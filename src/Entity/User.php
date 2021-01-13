@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -33,6 +35,31 @@ class User implements UserInterface
      * @ORM\Column(type="string")
      */
     private string $password;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lastName;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $companyName;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Tractor::class, mappedBy="user")
+     */
+    private $tractors;
+
+    public function __construct()
+    {
+        $this->tractors = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -111,5 +138,71 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getFirstName(): ?string
+    {
+        return $this->firstName;
+    }
+
+    public function setFirstName(string $firstName): self
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    public function getLastName(): ?string
+    {
+        return $this->lastName;
+    }
+
+    public function setLastName(string $lastName): self
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    public function getCompanyName(): ?string
+    {
+        return $this->companyName;
+    }
+
+    public function setCompanyName(?string $companyName): self
+    {
+        $this->companyName = $companyName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Tractor[]
+     */
+    public function getTractors(): Collection
+    {
+        return $this->tractors;
+    }
+
+    public function addTractor(Tractor $tractor): self
+    {
+        if (!$this->tractors->contains($tractor)) {
+            $this->tractors[] = $tractor;
+            $tractor->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTractor(Tractor $tractor): self
+    {
+        if ($this->tractors->removeElement($tractor)) {
+            // set the owning side to null (unless already changed)
+            if ($tractor->getUser() === $this) {
+                $tractor->setUser(null);
+            }
+        }
+
+        return $this;
     }
 }
