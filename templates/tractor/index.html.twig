@@ -13,19 +13,19 @@
             <p> Année : {{ tractor.year }} </p>
             <p> Coût estimé : {{ tractor.cost }} € / heures </p>
             </div>
+            <div class="footer">
             <a href="{{ path('tractor_show', {'id': tractor.id}) }}"><img class="buttons" src="{{ asset('build/images/info.png') }}" alt=""></a>
-            <a href="{{ path('tractor_edit', {'id': tractor.id}) }}"><img class="buttons" src="{{ asset('build/images/edit.png') }}" alt=""></a>   
+            <a href="{{ path('tractor_edit', {'id': tractor.id}) }}"><img class="buttons" src="{{ asset('build/images/edit.png') }}" alt=""></a>
+            <a href="{{ path('licence_plate') }}"><img class="buttons" src="{{ asset('build/images/retour.png') }}" alt=""></a>
+            <a href="{{ path('app_logout') }}"><img class="buttons" src="{{ asset('build/images/deconexion.png') }}" alt=""></a>
+            </div>
         {% else %}
             <tr>
                 <td colspan="11">no records found</td>
             </tr>
         {% endfor %}
-    <a href="{{ path('licence_plate') }}"><img class="buttons" src="{{ asset('build/images/retour.png') }}" alt=""></a>   
     {# <a href="{{ path('tractor_new') }}">Create new</a>    #}
 
 
-
-    
-    <a href="{{ path('app_logout') }}">Déconnexion</a>
 </div>
 {% endblock %}
