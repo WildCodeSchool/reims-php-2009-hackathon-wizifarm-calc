@@ -21,7 +21,7 @@ class TractorType extends AbstractType
             ->add('model')
             ->add('value')
             ->add('motorLoadCoefficient')
-            ->add('user')
+            ->add('user', null, ['choice_label' => 'firstName'])
         ;
     }
 
