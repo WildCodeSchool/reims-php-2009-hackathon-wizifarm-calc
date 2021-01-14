@@ -68,6 +68,16 @@ class Tractor
      */
     private $motorLoadCoefficient;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cost;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -192,4 +202,29 @@ class Tractor
 
         return $this;
     }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getCost(): ?int
+    {
+        return $this->cost;
+    }
+
+    public function setCost(int $cost): self
+    {
+        $this->cost = $cost;
+
+        return $this;
+    }
+    
 }
