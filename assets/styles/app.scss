@@ -1,15 +1,45 @@
 @import 'variables.scss';
 
 body {
-    background-color: $light-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    background: url(../images/back.png) no-repeat center;
+    background-size: cover;
     color: $green-color;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+}
+.homepage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .logo {
-    display: flex;
     width: 70%;
+    padding: 2em;
 }
-.farmer{
-    width: 50%;
+.link{
+    margin:10%;
+    border:solid;
+    border-radius: 20%;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:3%;
+}
+.form-control{
+    height: 60px;
+    width: 400px;
+    font-size: 30px;
+}
+.btn-login{
+    height: 60px;
+    width: 250px;
+    font-size: 30px;
+    margin:10%;
+
 }
