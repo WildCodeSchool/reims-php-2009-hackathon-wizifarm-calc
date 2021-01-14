@@ -77,6 +77,7 @@ class AppFixtures extends Fixture
 
         $manager->persist($tractor);
 
+        
         $tractor2 = new Tractor();
         $tractor2->setLicensePlate('ab-001-bc');
         $tractor2->setPurchaseDate(2016);
