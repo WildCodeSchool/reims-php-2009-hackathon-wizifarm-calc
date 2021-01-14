@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Tractor;
+use App\Entity\User;
 use App\Form\TractorType;
 use App\Repository\TractorRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -20,8 +21,10 @@ class TractorController extends AbstractController
      */
     public function index(TractorRepository $tractorRepository): Response
     {
+        $id = $this->getUser();
+        $tractor = $tractorRepository -> findBy(['user' => $id]);
         return $this->render('tractor/index.html.twig', [
-            'tractors' => $tractorRepository->findAll(),
+            'tractors' => $tractor,
         ]);
     }
 
