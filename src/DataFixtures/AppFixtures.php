@@ -38,6 +38,31 @@ class AppFixtures extends Fixture
 
         $manager->persist($contributor);
 
+
+        $user3 = new User();
+        $user3->setEmail('XxdarkdenisxX@agricultor.com');
+        $user3->setRoles(['AGRICULTOR']);
+        $user3->setFirstName('Denis');
+        $user3->setLastName('AGRICULTOR');
+        $user3->setPassword($this->passwordEncoder->encodePassword(
+            $user3,
+            'denis'
+        ));
+
+        $manager->persist($user3);
+
+        $user2 = new User();
+        $user2->setEmail('mass@agricultor.com');
+        $user2->setRoles(['AGRICULTOR']);
+        $user2->setFirstName('Mass');
+        $user2->setLastName('AGRICULTOR2');
+        $user2->setPassword($this->passwordEncoder->encodePassword(
+            $user2,
+            'mass'
+        ));
+
+        $manager->persist($user2);
+
         $tractor = new Tractor();
         $tractor->setLicensePlate('aa-000-bb');
         $tractor->setPurchaseDate(2005);
