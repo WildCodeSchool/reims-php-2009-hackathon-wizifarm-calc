@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\TractorRepository;
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TractorRepository;
 
 /**
  * @ORM\Entity(repositoryClass=TractorRepository::class)
