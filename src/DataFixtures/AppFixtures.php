@@ -73,6 +73,7 @@ class AppFixtures extends Fixture
         $tractor->setModel('ATLES 936');
         $tractor->setValue(135647);
         $tractor->setMotorLoadCoefficient(35);
+        $tractor->setUser($user2);
 
         $manager->persist($tractor);
 
@@ -87,6 +88,7 @@ class AppFixtures extends Fixture
         $tractor2->setModel('t7.315');
         $tractor2->setValue(243443);
         $tractor2->setMotorLoadCoefficient(35);
+        $tractor2->setUser($user2);
 
         $manager->persist($tractor2);
 
@@ -101,6 +103,7 @@ class AppFixtures extends Fixture
         $tractor3->setModel('Victory Plus');
         $tractor3->setValue(142350);
         $tractor3->setMotorLoadCoefficient(35);
+        $tractor3->setUser($user3);
 
         $manager->persist($tractor3);
         $manager->flush();
