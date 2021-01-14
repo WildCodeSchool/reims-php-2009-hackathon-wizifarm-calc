@@ -70,7 +70,7 @@ class AppFixtures extends Fixture
         $tractor->setConsumptionFuel('26');
         $tractor->setPower('264');
         $tractor->setBrand('Renault');
-        $tractor->setModele('ATLES 936');
+        $tractor->setModel('ATLES 936');
         $tractor->setValue(135647);
 
         $manager->persist($tractor);
@@ -82,7 +82,7 @@ class AppFixtures extends Fixture
         $tractor2->setConsumptionFuel('30');
         $tractor2->setPower('304');
         $tractor2->setBrand('New Holland');
-        $tractor2->setModele('t7.315');
+        $tractor2->setModel('t7.315');
         $tractor2->setValue(243443);
 
         $manager->persist($tractor2);
@@ -95,7 +95,7 @@ class AppFixtures extends Fixture
         $tractor3->setConsumptionFuel('26');
         $tractor3->setPower('260');
         $tractor3->setBrand('Lamborghini');
-        $tractor3->setModele('Victory Plus');
+        $tractor3->setModel('Victory Plus');
         $tractor3->setValue(142350);
 
         $manager->persist($tractor3);
