@@ -23,6 +23,7 @@
         </thead>
         <tbody>
         {% for tractor in tractors %}
+            <img src="{{ tractor.image }}">
             <tr>
                 <td>{{ tractor.id }}</td>
                 <td>{{ tractor.licensePlate }}</td>
