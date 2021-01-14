@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
-
 {% block title %}Hello LicencePlateController!{% endblock %}
 
 {% block body %}
+{% include 'logo.html.twig' %}
 <div class="search">
-<img class="logo" src="{{ asset('build/images/logo.png') }}" alt="">
 <img class="plaque" src="{{ asset('build/images/plaque.png') }}" alt="">
-<input class="input" type="text" id="name" name="name" required
-    minlength="7" maxlength="9"
 </div>
-<img class="logo1" src="{{ asset('build/images/logo.png') }}" alt="">
-<a href="{{ path('tractor_index') }}">Valider</a>
+<input class="input" type="text"required
+    minlength="7" maxlength="9"</input>
+<a href="{{ path('tractor_index') }}"><img class="valider" src="{{ asset('build/images/valider.png') }}" alt="">
+</a>
 {% endblock %}
