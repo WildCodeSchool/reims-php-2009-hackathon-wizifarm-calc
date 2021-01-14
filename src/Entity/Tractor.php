@@ -20,37 +20,37 @@ class Tractor
     /**
      * @ORM\Column(type="string", length=9)
      */
-    private $immatriculation;
+    private $licensePlate;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $dateAchat;
+    private $purchaseDate;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $annee;
+    private $year;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $consommation;
+    private $consumptionFuel;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $puissance;
+    private $power;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $marque;
+    private $brand;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $modele;
+    private $model;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="tractors")
@@ -61,7 +61,7 @@ class Tractor
     /**
      * @ORM\Column(type="integer")
      */
-    private $Valeur;
+    private $value;
 
     /**
      * @ORM\Column(type="integer")
@@ -73,86 +73,86 @@ class Tractor
         return $this->id;
     }
 
-    public function getImmatriculation(): ?string
+    public function getLicensePlate(): ?string
     {
-        return $this->immatriculation;
+        return $this->licensePlate;
     }
 
-    public function setImmatriculation(string $immatriculation): self
+    public function setLicensePlate(string $licensePlate): self
     {
-        $this->immatriculation = $immatriculation;
+        $this->licensePlate = $licensePlate;
 
         return $this;
     }
 
-    public function getDateAchat(): ?int
+    public function getPurchaseDate(): ?int
     {
-        return $this->dateAchat;
+        return $this->purchaseDate;
     }
 
-    public function setDateAchat(int $dateAchat): self
+    public function setPurchaseDate(int $purchaseDate): self
     {
-        $this->dateAchat = $dateAchat;
+        $this->purchaseDate = $purchaseDate;
 
         return $this;
     }
 
-    public function getAnnee(): ?int
+    public function getYear(): ?int
     {
-        return $this->annee;
+        return $this->year;
     }
 
-    public function setAnnee(int $annee): self
+    public function setYear(int $year): self
     {
-        $this->annee = $annee;
+        $this->year = $year;
 
         return $this;
     }
 
-    public function getConsommation(): ?string
+    public function getConsumptionFuel(): ?string
     {
-        return $this->consommation;
+        return $this->consumptionFuel;
     }
 
-    public function setConsommation(string $consommation): self
+    public function setConsumptionFuel(string $consumptionFuel): self
     {
-        $this->consommation = $consommation;
+        $this->consumptionFuel = $consumptionFuel;
 
         return $this;
     }
 
-    public function getPuissance(): ?string
+    public function getPower(): ?string
     {
-        return $this->puissance;
+        return $this->power;
     }
 
-    public function setPuissance(string $puissance): self
+    public function setPower(string $power): self
     {
-        $this->puissance = $puissance;
+        $this->power = $power;
 
         return $this;
     }
 
-    public function getMarque(): ?string
+    public function getBrand(): ?string
     {
-        return $this->marque;
+        return $this->brand;
     }
 
-    public function setMarque(string $marque): self
+    public function setBrand(string $brand): self
     {
-        $this->marque = $marque;
+        $this->brand = $brand;
 
         return $this;
     }
 
-    public function getModele(): ?string
+    public function getModel(): ?string
     {
-        return $this->modele;
+        return $this->model;
     }
 
-    public function setModele(string $modele): self
+    public function setModel(string $model): self
     {
-        $this->modele = $modele;
+        $this->model = $model;
 
         return $this;
     }
@@ -169,14 +169,14 @@ class Tractor
         return $this;
     }
 
-    public function getValeur(): ?int
+    public function getValue(): ?int
     {
-        return $this->Valeur;
+        return $this->value;
     }
 
-    public function setValeur(int $Valeur): self
+    public function setValue(int $value): self
     {
-        $this->Valeur = $Valeur;
+        $this->value = $value;
 
         return $this;
     }

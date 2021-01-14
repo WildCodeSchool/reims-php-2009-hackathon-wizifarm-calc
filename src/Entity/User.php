@@ -39,22 +39,22 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $firstName;
+    private string $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $lastName;
+    private string $lastName;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $companyName;
+    private string $companyName;
 
     /**
      * @ORM\OneToMany(targetEntity=Tractor::class, mappedBy="user")
      */
-    private $tractors;
+    private collection $tractors;
 
     public function __construct()
     {
