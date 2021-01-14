@@ -29,6 +29,9 @@
     "composer/xdebug-handler": {
         "version": "1.4.4"
     },
+    "divtag-nl/license-plate": {
+        "version": "v1.0.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
