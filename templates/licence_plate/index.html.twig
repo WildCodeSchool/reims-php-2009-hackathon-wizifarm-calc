@@ -6,8 +6,9 @@
 <div class="search">
 <img class="plaque" src="{{ asset('build/images/plaque.png') }}" alt="">
 </div>
-<input class="input" type="text"required
+<form action="{{ path('tractor_index') }}" method='post'>
+<input class="input" type="text" name="plate" required
     minlength="7" maxlength="9"</input>
-<a href="{{ path('tractor_index') }}"><img class="valider" src="{{ asset('build/images/valider.png') }}" alt="">
-</a>
+    <button type="submit"><img class="valider" src="{{ asset('build/images/valider.png') }}" alt=""></button>
+</form>
 {% endblock %}
