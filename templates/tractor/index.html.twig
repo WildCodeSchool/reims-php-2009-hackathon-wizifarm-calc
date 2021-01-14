@@ -3,28 +3,29 @@
 {% block title %}Mes Tracteurs{% endblock %}
 
 {% block body %}
-    <h1>Mes Tracteurs</h1>
-
-    
+    <div class="back2">
         {% for tractor in tractors %}
+        <div class="info">
             <img src="{{ tractor.image }}">
             <h3> Marque : {{ tractor.brand }}</h3>
             <p> Modéle : {{ tractor.model }}</p>
             <p> Immatriculation : {{ tractor.licensePlate }} </p>
             <p> Année : {{ tractor.year }} </p>
             <p> Coût estimé : {{ tractor.cost }} € / heures </p>
-            <a href="{{ path('tractor_show', {'id': tractor.id}) }}">Plus d'infos</a>
-            <a href="{{ path('tractor_edit', {'id': tractor.id}) }}">Modifier</a>   
+            </div>
+            <a href="{{ path('tractor_show', {'id': tractor.id}) }}"><img class="buttons" src="{{ asset('build/images/info.png') }}" alt=""></a>
+            <a href="{{ path('tractor_edit', {'id': tractor.id}) }}"><img class="buttons" src="{{ asset('build/images/edit.png') }}" alt=""></a>   
         {% else %}
             <tr>
                 <td colspan="11">no records found</td>
             </tr>
         {% endfor %}
-    <a href="{{ path('licence_plate') }}">Retour</a>   
-    <a href="{{ path('tractor_new') }}">Create new</a>   
+    <a href="{{ path('licence_plate') }}"><img class="buttons" src="{{ asset('build/images/retour.png') }}" alt=""></a>   
+    {# <a href="{{ path('tractor_new') }}">Create new</a>    #}
 
 
 
     
     <a href="{{ path('app_logout') }}">Déconnexion</a>
+</div>
 {% endblock %}

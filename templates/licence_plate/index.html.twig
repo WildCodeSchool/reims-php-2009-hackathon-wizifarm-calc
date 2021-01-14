@@ -9,6 +9,6 @@
 <form action="{{ path('tractor_index') }}" method='post'>
 <input class="input" type="text" name="plate" required
     minlength="7" maxlength="9"</input>
-    <button type="submit"><img class="valider" src="{{ asset('build/images/valider.png') }}" alt=""></button>
+<button class="button" type="submit"><img class="valider" src="{{ asset('build/images/valider.png') }}" alt=""></button>
 </form>
 {% endblock %}
