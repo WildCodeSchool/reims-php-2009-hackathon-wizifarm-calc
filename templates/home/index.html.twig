@@ -3,9 +3,8 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <img class="logo" src="build/images/logo.9fc7d468.png" alt="">
-    
+    <img class="logo" src="{{ asset('build/images/logo.png') }}" alt="">    
     <a href="{{ path('app_login')}}">S'identifier</a>
     
-    <img class="farmer" src="build/images/fermier.8fbd2f48.png" alt="">
+    <img class="farmer" src="{{ asset('build/images/fermier.png') }}" alt="">
 {% endblock %}
