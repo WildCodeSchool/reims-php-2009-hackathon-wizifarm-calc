@@ -3,8 +3,11 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-    <img class="logo" src="{{ asset('build/images/logo.png') }}" alt="">    
-    <a href="{{ path('app_login')}}">S'identifier</a>
+    <div class="homepage">
+    <img class="logo" src="{{ asset('build/images/logo.png') }}" alt="">
+    <span class="text-shadow">Besoin de conseils ?</span>
+    <span class="link text-shadow"><a href="{{ path('app_login')}}">Commencer mon CALC</a></span>
     
     <img class="farmer" src="{{ asset('build/images/fermier.png') }}" alt="">
+    </div>
 {% endblock %}
