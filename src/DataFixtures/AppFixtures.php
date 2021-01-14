@@ -74,6 +74,8 @@ class AppFixtures extends Fixture
         $tractor->setValue(135647);
         $tractor->setMotorLoadCoefficient(35);
         $tractor->setUser($user2);
+        $tractor->setImage('https://www.voitureenfantexpo.fr/media/catalog/product/cache/12/image/1800x/040ec09b1e35df139433887a97daa66f/X/M/XMX611R-rocmain.png');
+        $tractor->setCost(53);
 
         $manager->persist($tractor);
 
@@ -89,6 +91,8 @@ class AppFixtures extends Fixture
         $tractor2->setValue(243443);
         $tractor2->setMotorLoadCoefficient(35);
         $tractor2->setUser($user2);
+        $tractor2->setImage('https://www.voitures-electriques-pour-enfants.fr/media/catalog/product/cache/26/image/1800x/040ec09b1e35df139433887a97daa66f/X/M/XMX611G-rocmain.png');
+        $tractor2->setCost(68);
 
         $manager->persist($tractor2);
 
@@ -104,6 +108,8 @@ class AppFixtures extends Fixture
         $tractor3->setValue(142350);
         $tractor3->setMotorLoadCoefficient(35);
         $tractor3->setUser($user3);
+        $tractor3->setImage('https://www.voitureenfantexpo.fr/media/catalog/product/cache/12/image/1800x/040ec09b1e35df139433887a97daa66f/X/M/XMX611B-rocmain.png');
+        $tractor3->setCost(56);
 
         $manager->persist($tractor3);
         $manager->flush();
