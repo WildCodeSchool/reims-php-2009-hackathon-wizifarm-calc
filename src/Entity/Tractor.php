@@ -2,8 +2,9 @@
 
 namespace App\Entity;
 
-use App\Repository\TractorRepository;
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TractorRepository;
 
 /**
  * @ORM\Entity(repositoryClass=TractorRepository::class)
@@ -67,6 +68,16 @@ class Tractor
      * @ORM\Column(type="integer")
      */
     private $motorLoadCoefficient;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $cost;
 
     public function getId(): ?int
     {
@@ -192,4 +203,29 @@ class Tractor
 
         return $this;
     }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getCost(): ?int
+    {
+        return $this->cost;
+    }
+
+    public function setCost(int $cost): self
+    {
+        $this->cost = $cost;
+
+        return $this;
+    }
+    
 }

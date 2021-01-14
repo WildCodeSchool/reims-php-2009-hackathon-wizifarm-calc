@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tractor index{% endblock %}
+
+{% block body %}
+    <h1>Tractor index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>LicensePlate</th>
+                <th>PurchaseDate</th>
+                <th>Year</th>
+                <th>ConsumptionFuel</th>
+                <th>Power</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Value</th>
+                <th>MotorLoadCoefficient</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tractor in tractors %}
+            <img src="{{ tractor.image }}">
+            <tr>
+                <td>{{ tractor.id }}</td>
+                <td>{{ tractor.licensePlate }}</td>
+                <td>{{ tractor.purchaseDate }}</td>
+                <td>{{ tractor.year }}</td>
+                <td>{{ tractor.consumptionFuel }}</td>
+                <td>{{ tractor.power }}</td>
+                <td>{{ tractor.brand }}</td>
+                <td>{{ tractor.model }}</td>
+                <td>{{ tractor.value }}</td>
+                <td>{{ tractor.motorLoadCoefficient }}</td>
+                <td>
+                    <a href="{{ path('tractor_show', {'id': tractor.id}) }}">show</a>
+                    <a href="{{ path('tractor_edit', {'id': tractor.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('tractor_new') }}">Create new</a>
+    <a href="{{ path('app_logout') }}">Déconnexion</a>
+{% endblock %}
