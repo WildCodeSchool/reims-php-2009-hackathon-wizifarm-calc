@@ -17,12 +17,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class TractorController extends AbstractController
 {
     /**
-     * @Route("/", name="tractor_index", methods={"GET"})
+     * @Route("/", name="tractor_index", methods={"GET", "POST"})
      */
     public function index(TractorRepository $tractorRepository): Response
     {
+        $plate = $_POST['plate'];
         $id = $this->getUser();
-        $tractor = $tractorRepository -> findBy(['user' => $id]);
+        $tractor = $tractorRepository -> findBy(['user' => $id, 'licensePlate' => $plate]);
         return $this->render('tractor/index.html.twig', [
             'tractors' => $tractor,
         ]);
