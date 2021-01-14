@@ -3,7 +3,10 @@
 {% block title %}Hello LicencePlateController!{% endblock %}
 
 {% block body %}
-
-<img class="logo1" src="{{ asset('build/images/logo.png') }}" alt="">
-
+<div class="search">
+<img class="logo" src="{{ asset('build/images/logo.png') }}" alt="">
+<img class="plaque" src="{{ asset('build/images/plaque.png') }}" alt="">
+<input class="input" type="text" id="name" name="name" required
+    minlength="7" maxlength="9"
+</div>
 {% endblock %}
