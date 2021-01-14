@@ -18,7 +18,9 @@ body {
 .logo {
     width: 70%;
     padding: 2em;
-}
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 .link{
     margin:10%;
     border:solid;
@@ -61,7 +63,21 @@ body {
 .plaque{
     margin-left: 10%;
     height: 4em;
+    margin-top: 10%;
 }
 .input{
-    height: 4em;
+    height: 200px;
+    width: 600px;
+    margin-left: 22.6%;
+    margin-top: -213px;
+    position: absolute;
+    font-size: 100px;
+    text-align: center;
+}
+.valider{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20%;
+    width: 20%;
 }
