@@ -3,11 +3,13 @@
 {% block title %}Edit Tractor{% endblock %}
 
 {% block body %}
-    <h1>Edit Tractor</h1>
+    <div>
+        <h1>Edit Tractor</h1>
 
-    {{ include('tractor/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('tractor/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('tractor_index') }}">back to list</a>
+        {{ include('tractor/_delete_form.html.twig') }}
 
-    {{ include('tractor/_delete_form.html.twig') }}
+    </div>
+
 {% endblock %}
