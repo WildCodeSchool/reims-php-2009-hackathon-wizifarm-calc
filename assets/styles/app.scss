@@ -1,7 +1,6 @@
 @import 'variables.scss';
 
 body {
-    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     background: url(../images/back.png) no-repeat center;
     background-size: cover;
@@ -20,11 +19,27 @@ body {
     padding: 2em;
     display: block;
     margin-left: auto;
-    margin-right: auto }
-.link{
-    margin:10%;
-    border:solid;
-    border-radius: 20%;
+    margin-right: auto 
+}
+.buttonHomepage{
+    box-shadow:inset 0px 0px 12px -2px #caefab;
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	background-color:#77d42a;
+	border-radius:17px;
+	display:inline-block;
+	color:#306108;
+	font-size:50px;
+	font-weight:bold;
+	padding:20px 56px;
+	text-shadow:0px 1px 0px #aade7c;
+    font-family: 'Chakra Petch', sans-serif;
+    text-decoration: none;
+}
+.text-shadow{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    text-align: center;
+
 }
 
 .login{
@@ -37,24 +52,23 @@ body {
 
 }
 .form-control{
-    height: 60px;
-    width: 400px;
+    height: 100px;
+    width: 600px;
     font-size: 30px;
     margin: 2%;
+    border-radius: 17px;
+    font-family: 'Chakra Petch', sans-serif;
+}
+.inputText{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    color:  rgb(11, 38, 87);
 }
 .btn-login{
     height: 60px;
     width: 250px;
     font-size: 30px;
     margin:4%;
-}
-.title{
-    margin-top: -8%;
-    color: black;
-    text-align: center;
-    font-family: 'Montserrat', italic;
-    font-size: 44px;
-    text-shadow: 1px 1px 2px white;
 }
 .search{
     flex-direction: column;
@@ -109,4 +123,10 @@ body {
     margin-top:50%;
     display: flex;
     justify-content:space-around;
+}
+.row{
+    font-family: 'Chakra Petch', sans-serif;
+    border-radius: 20px;
+    height: 100px;
+    width: 700px;
 }
